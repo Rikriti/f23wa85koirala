@@ -15,9 +15,9 @@ router.get("/", function (req, res, next) {
   const opposite = Math.floor(Math.random() * (max - min + 1)) + min;
   const hypotenuse = Math.floor(Math.random() * (max - min + 1)) + min;
 
-  const response = `getCircleX(${radians},${radius}) is ${getCircleX(radians, radius)}`+`<br>`
-    + `Math.asinh(${x}) is ${Math.asinh(x)} `+`<br>`
-    + `calcAngle(${opposite},${hypotenuse}) is ${calcAngle(opposite, hypotenuse)}\n`;
+  const response = `getCircleX()applied to (${radians},${radius}) is ${getCircleX(radians, radius)}`+`<br>`
+    + `Math.asinh() applied to ${x} is ${Math.asinh(x)} `+`<br>`
+    + `calcAngle() applied to (${opposite},${hypotenuse}) is  ${calcAngle(opposite, hypotenuse)}\n`;
 
   res.send(response);
 });
